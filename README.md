@@ -1,46 +1,36 @@
-# Advanced Sample Hardhat Project
+# Carrot Swap
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+Orderbook based dex project built with a modern web3 stack.
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+## Resources
 
-Try running some of the following tasks:
+[Check out the app repo](https://github.com/AdamReinmuller/dex)
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
+## Tech stack
 
-# Etherscan verification
+- Hardhat
+- NextJS
+- EthersJS
+- UseDapp
+- React Query
+- Chakra UI
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+## How to use
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+- [Get test MATIC](https://faucet.polygon.technology/)
+- [Get test LINK](https://faucets.chain.link/mumbai)
+- Use the builtin helper to add/switch to mumbai network
+- Deposit funds
+- Trade- Enjoy
 
-```shell
-hardhat run --network ropsten scripts/deploy.ts
-```
+## Further improvements if time allows
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
-
-# Performance optimizations
-
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+1. Refactor
+2. Mobile view
+3. Separate balance which are active on a limit order
+4. Limit orders activate buys/sells not just add to the orderbook
+5. Implement various decimals nut just standard 18
+6. Abstract further away Contract calls and their states
+7. Logging and Transaction tracking
+8. True multichain support
+9. Design overhaul
